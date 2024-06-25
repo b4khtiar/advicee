@@ -109,6 +109,20 @@ onMounted(() => fetchAdvice())
   animation: slide 2s infinite linear;
 }
 
+@-webkit-keyframes slide {
+  0% {
+    background-position: 0% 81%
+  }
+
+  50% {
+    background-position: 100% 20%
+  }
+
+  100% {
+    background-position: 0% 81%
+  }
+}
+
 @keyframes slide {
   0% {
     background-position: 0% 81%
@@ -120,6 +134,12 @@ onMounted(() => fetchAdvice())
 
   100% {
     background-position: 0% 81%
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 
