@@ -123,6 +123,20 @@ onMounted(() => fetchAdvice())
   }
 }
 
+@-moz-keyframes slide {
+  0% {
+    background-position: 0% 81%
+  }
+
+  50% {
+    background-position: 100% 20%
+  }
+
+  100% {
+    background-position: 0% 81%
+  }
+}
+
 @keyframes slide {
   0% {
     background-position: 0% 81%
@@ -138,6 +152,12 @@ onMounted(() => fetchAdvice())
 }
 
 @-webkit-keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
   to {
     transform: rotate(360deg);
   }
