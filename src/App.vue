@@ -19,15 +19,15 @@ onMounted(() => fetchAdvice())
     <h1 class="advice-id">advice #{{ advice?.id }}</h1>
     <blockquote>
       <p class="advice">
-        "{{ advice?.advice }}"
+        {{ `"${advice?.advice}"` }}
       </p>
     </blockquote>
     <picture>
       <img class="divider" srcset="/images/pattern-divider-mobile.svg 295w, /images/pattern-divider-desktop.svg 444w"
         sizes="(max-width: 518px) 295px, 444px" src="/images/pattern-divider-mobile.svg" alt="divider">
     </picture>
-    <button @click="fetchAdvice" class="get-advice-btn" aria-label="get-advice-button">
-      <img src="/images/icon-dice.svg" alt="dice">
+    <button @click="fetchAdvice" class="get-advice-btn" aria-label="click to generate advice">
+      <img src="/images/icon-dice.svg" alt="dice icon">
     </button>
   </div>
 </template>
@@ -97,10 +97,13 @@ onMounted(() => fetchAdvice())
   animation: rotate 0.6s infinite ease-in;
 }
 
-.card.loading>h1,
-.card.loading>blockquote,
-.card.loading>picture {
-  visibility: hidden;
+.card.loading {
+
+  h1,
+  blockquote,
+  picture {
+    visibility: hidden;
+  }
 }
 
 .card.loading {
